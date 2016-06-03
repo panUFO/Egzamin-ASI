@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baza bohaterów gry - League of Legends</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'layouts/navbar' %>
+  
+<div class="container">
+  <% flash.each do |name, notice| %>
+    <%= content_tag(:div, notice, class: "alert alert-info") %>
+  <% end %>
+</div>
+    
+
+
+<%= yield %>
+
+</body>
+</html>

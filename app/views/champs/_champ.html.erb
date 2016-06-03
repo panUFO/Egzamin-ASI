@@ -1,0 +1,19 @@
+
+<tr>
+<td>
+  <%= champ.name %>
+</td>
+ 
+<td>
+  <%= champ.price %>
+</td>
+ <% if user_signed_in? %>
+<td>
+  <%= link_to 'Usuń bohatera', [champ.type, champ],
+               method: :delete,
+               data: { confirm: 'Jesteś pewien?' } %>
+</td>
+</tr>
+</tr><% else  %>
+</tr>
+<% end %>
